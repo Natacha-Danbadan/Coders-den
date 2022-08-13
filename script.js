@@ -192,3 +192,42 @@ let annualBonus = Number(incomeSentence.substring(42, 48))
 let online = Number(incomeSentence.substring(66, 72))
 let total = salary + annualBonus + online
 console.log(total)
+
+// const sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching';
+// const cleanedSentence = sentence.replace(/[@#%&;!$]/g, "");
+// let onlySentenceWords = sentence.replace(/[@#%&;!$?.,]/g, "");
+
+// console.log(onlySentenceWords.split(' '))
+
+// console.log(onlySentenceWords);
+// let sentenceWords = onlySentenceWords.split(' ');
+// let uniqueSentenceWords = [];
+// let uniqueSentenceWordsFrequencies = [];
+// for (let i = 0; i < sentenceWords.length; i++) {
+//     if (!uniqueSentenceWords.includes(sentenceWords[i])) {
+//         uniqueSentenceWords.push(sentenceWords[i]);
+//     }
+// }
+// console.log(uniqueSentenceWords);
+// for (let i = 0; i < uniqueSentenceWords.length; i++) {
+    
+//     uniqueSentenceWordsFrequencies.push(onlySentenceWords.match(wordSearch).length);
+// }
+// let wordSearch = new RegExp(`\\b${uniqueSentenceWords[5]}\\b`, 'gi');
+// console.log(wordSearch) 
+
+// console.log(uniqueSentenceWordsFrequencies);
+// let maxFrequency = Math.max(...uniqueSentenceWordsFrequencies);
+// console.log(Math.max(...uniqueSentenceWordsFrequencies));
+// let maxFrequencyIndex = uniqueSentenceWordsFrequencies.indexOf(maxFrequency);
+// console.log(uniqueSentenceWordsFrequencies.indexOf(maxFrequency));
+// let mostRepeatedWord = uniqueSentenceWords[maxFrequencyIndex];
+// console.log(mostRepeatedWord);
+
+
+// const income = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+// let [monthlySalary, annualBonus, monthlyCourse] = income.match(/\d+/g);
+// [monthlySalary, annualBonus, monthlyCourse] = [parseInt(monthlySalary), parseInt(annualBonus), parseInt(monthlyCourse)];
+// console.log([monthlySalary, annualBonus, monthlyCourse]);
+// const annualIncome = (monthlySalary * 12) + annualBonus + (monthlyCourse * 12);
+// console.log(annualIncome);
