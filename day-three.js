@@ -93,89 +93,123 @@ console.log(dateToday.getTime())
 
 //Exercise two
 //Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
-let base =  prompt('Enter base', 'base');
-let height =  prompt('Enter height', 'height');
-let areaOfTriangle = 0.5 * base * height;
-console.log(area);
+// let base =  prompt('Enter base', 'base');
+// let height =  prompt('Enter height', 'height');
+// let areaOfTriangle = 0.5 * base * height;
+// console.log(area);
 
-//Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
-let a =  prompt('Enter a', 'a');
-let b =  prompt('Enter b', 'b');
-let c = prompt('Enter c', 'c');
-let perimeterOfTriangle = a + b + c;
-// console.log(perimeterOfTriangle);
+// //Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
+// let a =  prompt('Enter a', 'a');
+// let b =  prompt('Enter b', 'b');
+// let c = prompt('Enter c', 'c');
+// let perimeterOfTriangle = a + b + c;
+// // console.log(perimeterOfTriangle);
 
-//calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
-let length =  prompt('Enter length', 'length');
-let width =  prompt('Enter width', 'width');
-let areaOfRectangle = length * width;
-let perimeterOfRectangle = 2 * (length + width);
-console.log(areaOfRectangle);
-console.log(perimeterOfRectangle);
+// //calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
+// let length =  prompt('Enter length', 'length');
+// let width =  prompt('Enter width', 'width');
+// let areaOfRectangle = length * width;
+// let perimeterOfRectangle = 2 * (length + width);
+// console.log(areaOfRectangle);
+// console.log(perimeterOfRectangle);
 
-//Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
-const pi = 3.14
-let radius = prompt('Enter radius', 'radius');
-let areaOfCircle = pi * radius * radius
-let circumeferenceOfCircle  = 2 * pi * radius
-console.log(areaOfCircle);
-console.log(circumeferenceOfCircle);
+// //Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
+// const pi = 3.14
+// let radius = prompt('Enter radius', 'radius');
+// let areaOfCircle = pi * radius * radius
+// let circumeferenceOfCircle  = 2 * pi * radius
+// console.log(areaOfCircle);
+// console.log(circumeferenceOfCircle);
 
-//Calculate the slope, x-intercept and y-intercept of y = 2x -2 */
+// //Calculate the slope, x-intercept and y-intercept of y = 2x -2 */
 
-//Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10)
-let x1 = 2
-let y1 = 2
-let x2 = 6
-let y2 = 10
-const m = (y2 - y1) / (x2 - x1)
-console.log(m)
+// //Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10)
+// let x1 = 2
+// let y1 = 2
+// let x2 = 6
+// let y2 = 10
+// const m = (y2 - y1) / (x2 - x1)
+// console.log(m)
 
-//Compare the slope of above two questions.
+// //Compare the slope of above two questions.
 
-//Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
+// //Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
 
-//Write a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
-let hours = prompt('Enter hours', 'hours');
-let rate = prompt('Enter rate', 'rate');
-let earnings = hours * rate
-console.log(`Your weekly earning is ${earnings}`); */
+// //Write a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
+// let hour = prompt('Enter hours', 'hours');
+// let rate = prompt('Enter rate', 'rate');
+// let earnings = hour * rate
+// console.log(`Your weekly earning is ${earnings}`);
 
-//If the length of your name is greater than 7 say, your name is long else say your name is short.
-if(firstName.length > 7) {
-    console.log('my name is long')
-}else {
-    console.log('my name is short')
-}
-//Compare your first name length and your family name length and you should get this output.
+// //If the length of your name is greater than 7 say, your name is long else say your name is short.
+// if(firstName.length > 7) {
+//     console.log('my name is long')
+// }else {
+//     console.log('my name is short')
+// }
+// //Compare your first name length and your family name length and you should get this output.
 
-if(firstName.length > lastName.length) {
-    console.log(`my first name, ${firstName}  is longer than my family name, ${lastName}`)
-}
+// if(firstName.length > lastName.length) {
+//     console.log(`my first name, ${firstName}  is longer than my family name, ${lastName}`)
+// }
     
-//Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.
-let myAge = 250
-let yourAge = 25
-let difference = myAge - yourAge
-console.log(`I am ${difference}  years older than you`)
+// //Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.
+// let myAge = 250
+// let yourAge = 25
+// let difference = myAge - yourAge
+// console.log(`I am ${difference}  years older than you`)
 
-//Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
-let birthyear = prompt('enter your year of birth', 'year')
-let drivingCriteria = thisYear - birthyear
-let waitTime = 18 - drivingCriteria 
-if(drivingCriteria > 18){
-    console.log(`You are ${drivingCriteria}. You are old enough to drive`)
-}else {
-    console.log(`You are ${drivingCriteria}. You will be allowed to drive after ${waitTime} years`)
-}
+// //Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
+// let birthyear = prompt('enter your year of birth', 'year')
+// let drivingCriteria = thisYear - birthyear
+// let waitTime = 18 - drivingCriteria 
+// if(drivingCriteria > 18){
+//     console.log(`You are ${drivingCriteria}. You are old enough to drive`)
+// }else {
+//     console.log(`You are ${drivingCriteria}. You will be allowed to drive after ${waitTime} years`)
+// }
 
-//Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
-let userAge = prompt('enter your current age', 'age')
-let YearInsecs = 31536000
-console.log(`You lived ${userAge * YearInsecs} seconds`)
+// //Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
+// let userAge = prompt('enter your current age', 'age')
+// let YearInsecs = 31536000
+// console.log(`You lived ${userAge * YearInsecs} seconds`)
 
 //Create a human readable time format using the Date time object
 // YYYY-MM-DD HH:mm
 // DD-MM-YYYY HH:mm
 // DD/MM/YYYY HH:mm
+
+let mins = dateToday.toLocaleTimeString('en-US', {
+    // en-US can be set to 'default' to use user's browser settings
+    hour: '2-digit',
+    minute: '2-digit',
+  }); 
+
+console.log(`${thisYear}-${month}-${day} ${hours}:${mins}`)
+console.log(`${day}-${month}-${thisYear} ${hours}:${mins}`)
+console.log(`${day}/${month}/${thisYear} ${hours}:${mins}`)
+// or this?
+console.log(dateToday.toDateString())
+console.log(dateToday.toLocaleDateString())
+
+/* study these codes some other time
+function formatDate(date, format) {
+    const map = {
+        mm: date.getMonth() + 1,
+        dd: date.getDate(),
+        yy: date.getFullYear().toString().slice(-2),
+        yyyy: date.getFullYear()
+    }
+    return format.replace(/mm|dd|yy|yyy/gi, matched => map[matched])
+}*/
+
+//Exercise three
+//Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
+
+console.log(dateToday.toLocaleString())
+console.log(`${thisYear}-${month}-${day} ${hours}:${mins}`)
+
+
+
+//Day four
 
