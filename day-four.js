@@ -127,3 +127,4 @@ let daySpecial = (X) => {
     }
 }
 console.log(daySpecial('SaturdaY'));
+
