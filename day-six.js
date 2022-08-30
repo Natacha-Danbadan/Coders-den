@@ -302,12 +302,95 @@ for(let weblang of webFrames){
 //This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
 let fruits = ['banana', 'orange', 'mango', 'lemon']
 function reverseArray(arr) {
-    var newArray = [];
-    for (var i = arr.length - 1; i >= 0; i--) {
+    const newArray = [];
+    for ( let i = arr.length - 1; i >= 0; i--) {
       newArray.push(arr[i]);
     }
     return newArray;
   }
 console.log(reverseArray(fruits))
 
+//or but it doesnt work grrrrrrrr
+const fruitsReverse = fruits.sort((a,b) => b - a)
+console.log(fruitsReverse)
+
+
 //Print all the elements of array as shown below.
+const fullStack = [
+    ['HTML', 'CSS', 'JS', 'React'],
+    ['Node', 'Express', 'MongoDB']
+  ]
+
+const [firstArray, secondArray] = fullStack
+// console.log(firstArray, secondArray)
+const [[w,x,y,z], [e,f,g]] = [firstArray, secondArray]
+console.log(w,x,y,z,e,f,g)
+
+//or using HOF ForEach
+fullStack.forEach(item =>{item.forEach(item => console.log(item))})
+
+//Exercise 3
+//Copy countries array(Avoid mutation)
+
+const copyCount = new Map().set(countries)
+console.log(copyCount)
+
+//or
+
+let copyCountry = [...countries]
+console.log(copyCountry)
+
+//Arrays are mutable. Create a copy of array which does not modify the original. 
+//Sort the copied array and store in a variable sortedCountries
+let sortedCountries = copyCountry.sort()
+console.log(sortedCountries) 
+
+//Sort the webTechs array and mernStack array
+let sortedWeb = webTechs.sort()
+let sortedMern = mernStack.sort()
+
+console.log(sortedWeb)
+console.log(sortedMern)
+
+//Extract all the countries contain the word 'land' from the countries array and print it as array
+let h;
+let countrylands = []
+for(h = 0; h < countries.length; h++){
+    if(countries[h].includes('land')){
+        countrylands.push(countries[h])
+    }
+}
+console.log(countrylands)
+
+//Find the country containing the hightest number of characters in the countries array
+let longestCountry = countries.sort(
+        function (a, b) {
+            return b.length - a.length;
+       }
+    )[0];
+console.log(longestCountry)
+
+
+//Extract all the countries containing only four characters from the countries array and print it as array
+const fourChar = []
+for(let each = 0; each < countries.length; each++ ){
+    countries[each].length === 4? fourChar.push(countries[each]):console.log('country not equal to four characters')       
+}
+
+//Extract all the countries containing two or more characters from the countries array and print it as array
+const twoChar = []
+for(let each = 0; each < countries.length; each++ ){
+    countries[each].length >= 2? twoChar.push(countries[each]):console.log('country not equal to four characters')       
+}
+console.log(twoChar)
+
+//Reverse the countries array and capitalize each country and stored it as an array
+const reverseCountry = []
+for(let each = 0; each < countries.length; each++ ){
+    let countryUpper = countries[each].toUpperCase()
+    reverseCountry.push(countryUpper)
+    reverseCountry.reverse()
+        
+}
+console.log(reverseCountry)
+
