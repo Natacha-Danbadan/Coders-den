@@ -130,6 +130,16 @@ for(let num=0; num<=100; num++ ){
 console.log([even,odd])
 
 //Develop a small script which generate array of 5 random numbers
+let arrayEmpty = []
+const randNum = (length, limit) => {
+    for(let number = 0; number < length; number++){
+        arrayEmpty.push(Math.trunc(Math.random() * limit))
+    }
+    return arrayEmpty
+}
+console.log(randNum(5,10))
+
+//or
 const arr = Array(5).fill().map(() => Math.trunc(Math.random() * 10) )
 console.log(arr)
 
@@ -174,11 +184,11 @@ const ranHex = function () {
 console.log(ranHex());
 
 //Write a script which generates a random rgb color number.
+let randValue  = (value) => {
+    return Math.round(Math.random() * value + 1)
+}
 const rgbGen = () =>{
-    let R = Math.round(Math.random() * 256)
-    let G = Math.round(Math.random() * 256)
-    let B = Math.round(Math.random() * 256)
-    return `rgb (${R},${G},${B})`
+    return `rgb (${randValue(255)},${randValue(255)},${randValue(255)})`
 }
 console.log(rgbGen())
 
@@ -310,10 +320,12 @@ function reverseArray(arr) {
   }
 console.log(reverseArray(fruits))
 
-//or but it doesnt work grrrrrrrr
-const fruitsReverse = fruits.sort((a,b) => b - a)
-console.log(fruitsReverse)
-
+//or 
+const newArrays = [] 
+while(fruits.length){
+    newArrays.push(fruits.pop())
+}
+console.log(newArrays)
 
 //Print all the elements of array as shown below.
 const fullStack = [
