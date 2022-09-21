@@ -268,7 +268,6 @@ const randomMacAddress = () => {
 console.log(randomMacAddress())
 
 
-
 //Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
 const randomHexaNumberGenerator = function () { 
   return `#${Math.floor(Math.random() * 0xabcdef).toString(16).padEnd(6, "0")}`;
@@ -420,7 +419,7 @@ console.log(factorial(7))
  const isEmpty = (param) => {
   return (param === undefined || param == null || param.length === 0) || (typeof param === 'string' && param.trim().length === 0) ||(param.constructor === Object && Object.keys(param).length === 0) ? true : false;
 }
-console.log(isEmpty())
+console.log(isEmpty( ' ' ))
 
 //Call your function sum, it takes any number of arguments and it returns the sum.
 sum = 0
@@ -452,15 +451,26 @@ console.log(sumOfArrayItems(testArray))
 
 //console.log(modifyArray(['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']);
 //['Avocado', 'Tomato', 'Potato','Mango', 'LEMON', 'Carrot']
-// const modeifiedArray = []
-// const fruitArray = ['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']
-// const modifyArray = (arr) =>{
-//   for(let m = 0; m < arr.length; m++){
-
-
-
-//   }
-// }
+let arr
+const fruitArray = ['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']
+const modifyArray = (array,fifthItem, arraylength ) =>{
+  if(array.length < arraylength) {
+    return "item not found"
+  }
+  else{
+    array.filter((item, index ) => {
+      if(index === fifthItem){
+        let firstHalf = array.slice(0, fifthItem) 
+        let actualEl = item.toUpperCase()
+        let secondHalf = array.slice(fifthItem + 1, array.length)
+        console.log(secondHalf)
+        arr = [...firstHalf, actualEl, ...secondHalf]
+      }
+    }) 
+  }  
+  return arr
+}
+console.log(modifyArray(fruitArray, 4, 5))
 
 //Write a function called isPrime, which checks if a number is prime number.
 //since i will always be less than the parameter the condition  will never allow parameter to be divisible by itself and when parameter is divisible by i then the number is an even number.
@@ -488,6 +498,11 @@ console.log(arrayType(arrayMix, 'string'));
 
 
 //JavaScript variable name does not support special characters or symbols except $ or _. Write a function isValidVariable which check if a variable is valid or invalid variable.
+const isValidVariable = (varName) => {
+  const specialChars = /['!@#%&*()+\-=\[\]{};':"\\|,.<>\/?-]/
+  return !specialChars.test(varName)
+}
+console.log(isValidVariable("&tvt"))
 
 //Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
 const sevenRandomNumbers = ()  => {
@@ -516,7 +531,7 @@ const countries = [
   'Kenya'
 ]
 const reverseCountries = (arr) => {
-  const newCountry = [...countries].reverse()
+  const newCountry = [...arr].reverse()
   console.log(newCountry)
 }
-reverseCountries()
+reverseCountries(countries)
