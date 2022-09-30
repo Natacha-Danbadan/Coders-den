@@ -174,6 +174,13 @@ console.log(getFirstTenCountries)
 const getFirstTenCountriesTwo = countriesTwo.slice([0], [10]).reduce((acc, curr, index, arr) => arr)
 console.log(getFirstTenCountriesTwo)
 
+//Declare a getLastTenCountries function which which returns the last ten countries in the countries array.
+const getLastTenCountries = countriesTwo.slice(0, countriesTwo.length).reduce((acc, curr, index, arr) => arr)
+console.log(getLastTenCountries)
+
+//Find out which letter is used many times as initial for a country name from the countries array 
+//(eg. Finland, Fiji, France etc)
+
 
 //subgroup sturvs
 
@@ -265,6 +272,7 @@ const numbersss = [1, 2, 3, 5, 8, 4, 7, 9, 5, 6, 8, 9, 10]
    // Build a function that returns an array of integers from n to 1 where n>0.
 
   //Example : n=5 --> [5,4,3,2,1]
+  
     const nums = []
   const arrayOfIntegers = () => {
     for (let n = 5; n >= 1; n--){
@@ -300,7 +308,6 @@ console.log(integer(2.5))
 
 // / Write a function that takes a Set and a value as arguments
 // // Check if the value is present in the Set
-
 
 const setValues = (set, values ) => { return set.has(values)? true: false}
 console.log(setValues(new Set(['1', '5', '3']), '2'))
@@ -501,3 +508,57 @@ const modifiedData = array => array.sort((a, b) => a.population - b.population).
 
 }) 
 console.log(modifiedData(data))
+
+
+//day 9 continues.
+
+//Exercises: Level 3
+//Use the countries information, in the data folder. Sort countries by name, by capital, by population
+
+const sortedByName = array => array.sort((a, b) => a - b).map((country)=> {
+return {
+"name":country.name.official,
+"capital":country.capital[0],
+"population":country.population
+}}
+)
+console.log(sortedByName(data))
+
+//*** Find the 10 most spoken languages:
+// console.log(mostSpokenLanguages(countries, 3))
+// [
+// {country: 'English',count: 91},
+// {country: 'French',count: 45},
+// {country: 'Arabic',count: 25},
+// ]```
+
+//*** Use countries_data.js file create a function which create the ten most populated countries
+
+// ** Try to develop a program which calculate measure of central tendency of a sample(mean, median, mode) and measure of variability(range, variance, standard deviation). In addition to those measures find the min, max, count, percentile, and frequency distribution of the sample. You can create an object called statistics and create all the functions which do statistical calculations as method for the statistics object. Check the output below.
+
+// const ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
+
+// console.log('Count:', statistics.count()) // 25
+// console.log('Sum: ', statistics.sum()) // 744
+// console.log('Min: ', statistics.min()) // 24
+// console.log('Max: ', statistics.max()) // 38
+// console.log('Range: ', statistics.range() // 14
+// console.log('Mean: ', statistics.mean()) // 30
+// console.log('Median: ',statistics.median()) // 29
+// console.log('Mode: ', statistics.mode()) // {'mode': 26, 'count': 5}
+// console.log('Variance: ',statistics.var()) // 17.5
+// console.log('Standard Deviation: ', statistics.std()) // 4.2
+// console.log('Variance: ',statistics.var()) // 17.5
+// console.log('Frequency Distribution: ',statistics.freqDist()) # [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
+// console.log(statistics.describe())
+// Count: 25
+// Sum:  744
+// Min:  24
+// Max:  38
+// Range:  14
+// Mean:  30
+// Median:  29
+// Mode:  (26, 5)
+// Variance:  17.5
+// Standard Deviation:  4.2
+// Frequency Distribution: [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.
